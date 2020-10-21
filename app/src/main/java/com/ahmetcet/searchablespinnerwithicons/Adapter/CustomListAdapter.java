@@ -59,7 +59,7 @@ public class CustomListAdapter extends BaseAdapter implements Filterable {
             String imgName = filteredValues.get(i).getValue();
             imgName = imgName.split(" - ")[0];
 
-            icon.setImageDrawable(context.getDrawable(GetGroupIconImage(imgName.toLowerCase(Locale.ENGLISH))));
+            //icon.setImageDrawable(context.getDrawable(GetGroupIconImage(imgName.toLowerCase(Locale.ENGLISH))));
 
         } catch (Exception e) {
             return view;

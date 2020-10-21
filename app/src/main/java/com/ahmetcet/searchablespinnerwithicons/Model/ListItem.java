@@ -4,6 +4,11 @@ public class ListItem {
     String id;
     String value;
 
+    public ListItem(String id, String val){
+        this.id = id;
+        this.value = val;
+    }
+
     public void setId(String id) {
         this.id = id;
     }
