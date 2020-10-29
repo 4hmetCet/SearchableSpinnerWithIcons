@@ -95,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<ListItem> getListData(){
         ArrayList<ListItem> result = new ArrayList<>();
-        result.add(new ListItem("1","test"));
+        result.add(new ListItem("1","test_1"));
+        result.add(new ListItem("2","test_2"));
 
         return result;
     }
