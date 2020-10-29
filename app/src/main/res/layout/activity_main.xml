@@ -15,5 +15,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:hint="Seçiniz"
+        android:onClick="OpenSpinnerDialog"
         android:drawableEnd="@drawable/ic_baseline_arrow_drop_down_24"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

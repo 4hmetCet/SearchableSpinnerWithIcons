@@ -69,11 +69,6 @@ public class CustomListAdapter extends BaseAdapter implements Filterable {
     }
 
     @Override
-    public View getDropDownView(int position, View convertView, ViewGroup parent) {
-        return super.getDropDownView(position, convertView, parent);
-    }
-
-    @Override
     public Filter getFilter()
     {
         return new Filter()
