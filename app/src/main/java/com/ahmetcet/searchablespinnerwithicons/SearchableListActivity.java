@@ -17,13 +17,23 @@ import com.ahmetcet.searchablespinnerwithicons.Model.ListItem;
 
 import java.util.ArrayList;
 
-public class ListActivity extends AppCompatActivity {
+public class SearchableListActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_list);
+        setSearchableList();
+    }
+    private ArrayList<ListItem> getListData(){
+        ArrayList<ListItem> result = new ArrayList<>();
+        result.add(new ListItem("1","one_1"));
+        result.add(new ListItem("2","two_2"));
 
+        return result;
+    }
+
+    private void setSearchableList(){
         final CustomListAdapter listAdapter=new CustomListAdapter(getApplicationContext(),getListData());
 
         EditText editText_search = (EditText) findViewById(R.id.editText_spinnerSearch);
@@ -59,13 +69,6 @@ public class ListActivity extends AppCompatActivity {
         });
 
 
-    }
-    private ArrayList<ListItem> getListData(){
-        ArrayList<ListItem> result = new ArrayList<>();
-        result.add(new ListItem("1","one_1"));
-        result.add(new ListItem("2","two_2"));
-
-        return result;
     }
 
 }

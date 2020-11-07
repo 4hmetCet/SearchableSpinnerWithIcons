@@ -1,12 +1,10 @@
 package com.ahmetcet.searchablespinnerwithicons;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -14,7 +12,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.EditText;
-import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -44,8 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void OpenSpinnerDialog(View view) {
 
-        startActivity(new Intent(MainActivity.this, ListActivity.class));
-        spinnerDialog = new Dialog(MainActivity.this);
+        startActivity(new Intent(MainActivity.this, SearchableListActivity.class));
+        /*spinnerDialog = new Dialog(MainActivity.this);
         spinnerDialog.setContentView(R.layout.dialog_searchable_spinner);
         spinnerDialog.setCancelable(true);
         spinnerDialog.getWindow().setLayout(650,800);
@@ -92,7 +89,7 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        });
+        });*/
 
 
     }
