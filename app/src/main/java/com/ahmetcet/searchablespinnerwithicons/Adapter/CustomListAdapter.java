@@ -35,16 +35,19 @@ public class CustomListAdapter extends BaseAdapter implements Filterable {
 
     @Override
     public int getCount() {
+
         return filteredValues.size();
     }
 
     @Override
     public ListItem getItem(int pos) {
+
         return filteredValues.get(pos);
     }
 
     @Override
     public long getItemId(int pos) {
+
         return pos;
     }
 
@@ -56,8 +59,7 @@ public class CustomListAdapter extends BaseAdapter implements Filterable {
         names.setText(filteredValues.get(i).getValue());
 
         try {
-            String imgName = filteredValues.get(i).getValue();
-            imgName = imgName.split(" - ")[0];
+            String imgName = filteredValues.get(i).getId();
 
             icon.setImageDrawable(context.getDrawable(GetGroupIconImage(imgName.toLowerCase(Locale.ENGLISH))));
 
