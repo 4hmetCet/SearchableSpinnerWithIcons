@@ -41,13 +41,8 @@ public class MainActivity extends AppCompatActivity {
 
     public void OpenSpinnerDialog(View view) {
 
-        startActivity(new Intent(MainActivity.this, SearchableListActivity.class));
-        /*spinnerDialog = new Dialog(MainActivity.this);
-        spinnerDialog.setContentView(R.layout.dialog_searchable_spinner);
-        spinnerDialog.setCancelable(true);
-        spinnerDialog.getWindow().setLayout(650,800);
-        //spinnerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        spinnerDialog.show();
+        //startActivity(new Intent(MainActivity.this, SearchableListActivity.class));
+        spinnerDialog = new Dialog(MainActivity.this);
 
         final CustomListAdapter listAdapter=new CustomListAdapter(getApplicationContext(),getListData());
 
@@ -89,7 +84,13 @@ public class MainActivity extends AppCompatActivity {
             public void afterTextChanged(Editable s) {
 
             }
-        });*/
+        });
+        spinnerDialog.setContentView(dialogView);
+        spinnerDialog.setCancelable(true);
+        spinnerDialog.getWindow().setLayout(650,800);
+        //spinnerDialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+        spinnerDialog.show();
+
 
 
     }
